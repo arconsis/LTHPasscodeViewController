@@ -14,6 +14,7 @@
 - (void)maxNumberOfFailedAttemptsReached;
 - (void)passcodeWasEnteredSuccessfully;
 - (void)logoutButtonWasPressed;
+- (void)onlyOneRetryLeft;
 @end
 
 @interface LTHPasscodeViewController : UIViewController

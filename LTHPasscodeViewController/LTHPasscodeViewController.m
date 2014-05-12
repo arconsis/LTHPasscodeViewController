@@ -994,6 +994,13 @@ static NSInteger const kMaxNumberOfAllowedFailedAttempts = 6;
     
 	_failedAttempts++;
 	
+
+    if(kMaxNumberOfAllowedFailedAttempts - 1 == _failedAttempts) {
+        if ([self.delegate respondsToSelector:@selector(onlyOneRetryLeft)]) {
+            [self.delegate onlyOneRetryLeft];
+        }
+    }
+
 	if (kMaxNumberOfAllowedFailedAttempts > 0 &&
 		_failedAttempts == kMaxNumberOfAllowedFailedAttempts &&
 		[self.delegate respondsToSelector: @selector(maxNumberOfFailedAttemptsReached)])
