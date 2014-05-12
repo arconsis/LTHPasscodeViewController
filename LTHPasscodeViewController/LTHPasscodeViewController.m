@@ -23,7 +23,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 static NSInteger const kCoverViewTag = 99;
 // Set to 0 if you want to skip the check. If you don't, nothing happens,
 // just maxNumberOfAllowedFailedAttempts protocol method is checked for and called.
-static NSInteger const kMaxNumberOfAllowedFailedAttempts = 10;
+static NSInteger const kMaxNumberOfAllowedFailedAttempts = 6;
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 // Gaps
